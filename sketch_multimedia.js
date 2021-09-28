@@ -5,7 +5,7 @@ let ncol=10;
 colors = ["#FF0000", "#0000FF", "#FFFF00"]
 
 function setup() {
-  createCanvas((h+pad)*nrow,(h+pad)*ncol);
+  createCanvas((h+pad)*nrow,(h+pad)*ncol, SVG);
   angleMode(RADIANS);
   noLoop();
   // noStroke();
@@ -27,6 +27,11 @@ function draw() {
 
     }
   }
+
+}
+
+function mousePressed(){
+  save("tiles.svg");
 }
 
 function drawTile(r){
